@@ -1,0 +1,1 @@
+create index IX_53F41BEE on WLA_WordlibData (wordlibId);

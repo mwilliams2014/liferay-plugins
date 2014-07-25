@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.docs.wordlibapp.model.WordlibData">
+		<field name="wordlibId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="imageId" type="long" />
+		<field name="name" type="String" />
+		<field name="person" type="String" />
+		<field name="place" type="String" />
+		<field name="adjective" type="String" />
+		<field name="animal" type="String" />
+		<field name="celebrity" type="String" />
+		<field name="verb" type="String" />
+		<field name="adverb" type="String" />
+	</model>
+</model-hints>
