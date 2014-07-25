@@ -38,14 +38,14 @@ public class WordlibApp extends MVCPortlet {
 	String celebrity = ParamUtil.getString(request, "celebrity");
 	String verb = ParamUtil.getString(request, "verb");
 	String adverb = ParamUtil.getString(request, "adverb");
-	long wordlibId = ParamUtil.getLong(request, "wordlibId");
+	//long wordlibId = ParamUtil.getLong(request, "wordlibId");
 	
 	try {
-		WordlibDataLocalServiceUtil.addWordlibData(serviceContext.getUserId(), wordlibId, name, person, place, adjective, animal, celebrity, verb, adverb, serviceContext);
+		WordlibDataLocalServiceUtil.addWordlibData(serviceContext.getUserId(), name, person, place, adjective, animal, celebrity, verb, adverb, serviceContext);
 		
 		SessionMessages.add(request, "wordlibDataAdded");
 		
-		response.setRenderParameter("wordlibId", Long.toString(wordlibId));
+		//response.setRenderParameter("wordlibId", Long.toString(wordlibId));
 	
 	} catch (Exception e) {
 		
@@ -75,7 +75,7 @@ public class WordlibApp extends MVCPortlet {
 			
 			wordlibId = wordlib.getWordlibId();
 			
-			wordlibId = wordlibs.get(0).getWordlibId();
+			//wordlibId = wordlibs.get(0).getWordlibId();
 			
 			renderRequest.setAttribute("wordlibId", wordlibId);
 			

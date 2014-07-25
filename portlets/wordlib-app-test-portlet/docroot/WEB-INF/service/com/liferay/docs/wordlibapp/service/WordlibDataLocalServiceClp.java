@@ -122,7 +122,7 @@ public class WordlibDataLocalServiceClp implements WordlibDataLocalService {
 		_methodName20 = "addWordlibData";
 
 		_methodParameterTypes20 = new String[] {
-				"long", "long", "java.lang.String", "java.lang.String",
+				"long", "java.lang.String", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"java.lang.String", "java.lang.String", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
@@ -710,11 +710,10 @@ public class WordlibDataLocalServiceClp implements WordlibDataLocalService {
 
 	@Override
 	public com.liferay.docs.wordlibapp.model.WordlibData addWordlibData(
-		long userId, long imageId, java.lang.String name,
-		java.lang.String person, java.lang.String place,
-		java.lang.String adjective, java.lang.String animal,
-		java.lang.String celebrity, java.lang.String verb,
-		java.lang.String adverb,
+		long userId, java.lang.String name, java.lang.String person,
+		java.lang.String place, java.lang.String adjective,
+		java.lang.String animal, java.lang.String celebrity,
+		java.lang.String verb, java.lang.String adverb,
 		com.liferay.portal.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
@@ -725,8 +724,6 @@ public class WordlibDataLocalServiceClp implements WordlibDataLocalService {
 					_methodParameterTypes20,
 					new Object[] {
 						userId,
-						
-					imageId,
 						
 					ClpSerializer.translateInput(name),
 						

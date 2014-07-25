@@ -296,17 +296,15 @@ public class WordlibDataLocalServiceWrapper implements WordlibDataLocalService,
 
 	@Override
 	public com.liferay.docs.wordlibapp.model.WordlibData addWordlibData(
-		long userId, long imageId, java.lang.String name,
-		java.lang.String person, java.lang.String place,
-		java.lang.String adjective, java.lang.String animal,
-		java.lang.String celebrity, java.lang.String verb,
-		java.lang.String adverb,
+		long userId, java.lang.String name, java.lang.String person,
+		java.lang.String place, java.lang.String adjective,
+		java.lang.String animal, java.lang.String celebrity,
+		java.lang.String verb, java.lang.String adverb,
 		com.liferay.portal.service.ServiceContext serviceContext)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return _wordlibDataLocalService.addWordlibData(userId, imageId, name,
-			person, place, adjective, animal, celebrity, verb, adverb,
-			serviceContext);
+		return _wordlibDataLocalService.addWordlibData(userId, name, person,
+			place, adjective, animal, celebrity, verb, adverb, serviceContext);
 	}
 
 	/**

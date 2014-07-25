@@ -84,15 +84,15 @@ public class WordlibDataLocalServiceImpl extends WordlibDataLocalServiceBaseImpl
 		}
 	}
 	
-	public WordlibData addWordlibData( long imageId, long wordlibId, String name, String person, String place, String adjective, String animal, String celebrity, String verb, String adverb, ServiceContext serviceContext)
+	public WordlibData addWordlibData( long userId, String name, String person, String place, String adjective, String animal, String celebrity, String verb, String adverb, ServiceContext serviceContext)
 	throws PortalException, SystemException {
 		long groupId = serviceContext.getScopeGroupId();
 		
-		User user = userPersistence.findByPrimaryKey(wordlibId);
+		User user = userPersistence.findByPrimaryKey(userId);
 		
 		validate(name, person, place, adjective, animal, celebrity, verb, adverb);
 		
-		wordlibId = counterLocalService.increment();
+		long wordlibId = counterLocalService.increment(WordlibData.class.getName());
 		
 		WordlibData wordlibData = wordlibDataPersistence.create(wordlibId);
 		
@@ -109,8 +109,8 @@ public class WordlibDataLocalServiceImpl extends WordlibDataLocalServiceBaseImpl
 		wordlibData.setPerson(person);
 		wordlibData.setPlace(place);
 		wordlibData.setVerb(adverb);
-		wordlibData.setImageId(imageId);
-		wordlibData.setPrimaryKey(wordlibData.getPrimaryKey());
+		//wordlibData.setImageId(imageId);
+		//wordlibData.setPrimaryKey(wordlibData.getPrimaryKey());
 		
 		wordlibDataPersistence.update(wordlibData);
 		
