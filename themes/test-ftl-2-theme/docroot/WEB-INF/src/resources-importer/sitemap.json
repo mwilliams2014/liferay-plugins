@@ -1,0 +1,152 @@
+{
+							"layouts": [
+								{
+									"friendlyURL": "/home",
+									"name": "Welcome",
+									"layoutTemplateId": "1_2_1_columns",
+									"title": "Welcome",
+									"columns": [
+											[
+												"carousel.xml"
+											],
+											[
+											    {
+												"portletId": "118",
+												"portletPreferences": {
+												    "columns": [
+													[
+													    "to-moon.xml"
+													],
+													[
+													    "something-you-don't-know.xml"
+													]
+												    ],
+												    "layoutTemplateId": "2_columns_i",
+												    "portletSetupShowBorders": "false"
+												}
+											    }
+											],
+											[
+											    {
+												"portletId": "118",
+												"portletPreferences": {
+												    "columns": [
+													[
+													    "just-get-along.xml"
+													],
+													[
+													    "nebulae.xml"
+													]
+												    ],
+												    "layoutTemplateId": "2_columns_i",
+												    "portletSetupShowBorders": "false"
+												}
+											    }
+											],
+											[
+											    {
+												"portletId": "118",
+												"portletPreferences": {
+												    "columns": [
+													[
+													    "big-test.xml",
+													    "jupiter.xml"
+													],
+													[
+													    "what-is-this.xml",
+													    "really-bad.xml"
+													]
+												    ],
+												    "layoutTemplateId": "2_columns_i",
+												    "portletSetupShowBorders": "false"
+												}
+											    }
+											]
+									]
+								},
+								{
+									"friendlyURL": "/news",
+									"name": "News",
+									"layoutTemplateId": "1_column",
+									"title": "News",
+									"columns": [
+											[
+
+											]
+									]
+								},
+								{
+									"friendlyURL": "/about",
+									"name": "About",
+									"layoutTemplateId": "1_column",
+									"title": "About",
+									"layouts": [
+										{
+											"title": "Events",
+											"name": "Events",
+											"friendlyURL": "/events",
+											"layoutTemplateId": "1_column",
+											"columns": [
+										[
+					
+										]
+	
+									],
+					
+										},
+										{
+											"title": "Awards",
+											"name": "Awards",
+											"friendlyURL": "/awards",
+											"layoutTemplateId": "1_column",
+											"columns": [
+										[
+					
+										]
+	
+									],
+										},
+										{
+											"title": "Press",
+											"name": "Press",
+											"friendlyURL": "/press",
+											"layoutTemplateId": "1_column",
+											"columns": [
+										[
+					
+										]
+	
+									],
+					
+										}
+									],
+									"columns": [
+											[
+
+											]
+									]
+								},
+								{
+									"friendlyURL": "/support",
+									"name": "Support",
+									"layoutTemplateId": "1_column",
+									"title": "Support",
+									"columns": [
+											[
+
+											]
+									]
+								},
+								{
+									"friendlyURL": "/connect",
+									"name": "Connect",
+									"layoutTemplateId": "1_column",
+									"title": "Connect",
+									"columns": [
+											[
+
+											]
+									]
+								}
+							]
+						}

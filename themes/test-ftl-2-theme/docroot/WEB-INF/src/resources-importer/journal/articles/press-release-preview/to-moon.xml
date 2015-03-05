@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="image" index="0" type="wcm-image" dataType="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=to-moon.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="heading" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[I have been]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="abstract" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[To the Moon and  back.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="body" index="0" type="text_area" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[And believe me, moonfolk are the nicest people.]]></dynamic-content>
+	</dynamic-element>
+</root>

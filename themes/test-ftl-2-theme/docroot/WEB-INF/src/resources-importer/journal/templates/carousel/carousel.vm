@@ -1,0 +1,60 @@
+##
+## Web content templates are used to lay out the fields defined in a
+## web content structure.
+##
+## Please use the left panel to quickly add commonly used variables.
+## Autocomplete is also available and can be invoked by typing "$".
+##
+
+<style type="text/css">
+.aui .carousel {
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+margin: 20px 0;
+margin-left: auto;
+margin-right: auto;
+}
+.aui .carousel-item {
+border-radius: 6px;
+opacity: 0;
+}
+.aui .carousel li {
+margin: 0 !important;
+}
+.aui img {
+height: 100%
+}
+</style>
+
+#set($imageWidth = $maxImageWidth.Data)
+#set($imageHeight = $maxImageHeight.Data)
+#set($imageWidthPx = $imageWidth + "px")
+#set($imageHeightPx = $imageHeight + "px")
+#set($interval = $timeInterval.Data)
+#set($activeIndexValue = $activeIndex.Data)
+
+#set($totalCount = 0)
+<div id="myCarousel">
+#foreach($imageElement in $image.getSiblings())
+#if($imageElement.getData() != "")
+<img class="carousel-item" src="$imageElement.Data" height="$imageHeightPx" width="$imageWidthPx" />
+#set($totalCount = $totalCount + 1)
+#end
+#end
+</div>
+#if($totalCount > 0)
+<script>
+AUI().ready('aui-carousel', function(A)
+{
+var carousel = new A.Carousel(
+{
+contentBox: '#myCarousel',
+activeIndex: $activeIndexValue,
+intervalTime: $interval,
+width: $imageWidth,
+height: $imageHeight
+}).render();
+});
+</script>
+#end

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="image" index="0" type="wcm-image" dataType="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=what-is-this.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="heading" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Another big image]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="abstract" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Oh, my!]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="body" index="0" type="text_area" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[What is this?]]></dynamic-content>
+	</dynamic-element>
+</root>

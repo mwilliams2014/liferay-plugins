@@ -1,0 +1,1073 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import "aui_variables";
+@import "compass";
+@import "mixins";
+@import url(color_schemes/christmas.css);
+@import url(color_schemes/ice.css);
+
+$dockbarColor: #000;
+$dockbarHighlightColor: #444444;
+/* ---------- AUI ----------- */
+html{ 
+	height:100%;
+	}
+.aui {
+	body {
+		color: $fontColor;
+		font: 14px/1.5 Arial, Helvetica, sans-serif;
+		font-size: $fontSize;
+	}
+	
+	.sign-in{
+		height:100%;
+		background-image:url("../images/custom/space2.jpg");
+	}
+
+	.btn {
+		background: $btnBackground;
+		border-width: 0;
+		color: $white;
+		padding: 5px 15px;
+		text-align: center;
+		vertical-align: top;
+
+		&:hover {
+			background: $btnBackgroundHighlight;
+			color: $btnBackground;
+		}
+
+		&.style-a {
+			background: #F3F3F4;
+			color: $fontColor;
+
+			&:hover {
+				background: $btnBackgroundHighlight;
+				color: $fontColor;
+			}
+		}
+
+		&.style-b {
+			background: transparent;
+			border: 1px solid $borderColor;
+			color: $fontColor;
+
+			&:hover {
+				background: $btnBackgroundHighlight;
+				color: $fontColor;
+			}
+		}
+	}
+}
+
+/* ---------- Base ---------- */
+
+.primary-background-color {
+	background: $primaryColor;
+}
+
+.primary-text-color {
+	color: $primaryColor;
+}
+
+.secondary-background-color {
+	background: $secondaryColor;
+}
+
+.secondary-text-color {
+	color: $secondaryColor;
+}
+
+/* ---------- Banner ---------- */
+
+#banner {
+	background: none repeat scroll 0 0;
+	/*position: relative;*/
+	position: fixed;
+	padding-bottom:70px;
+	
+    #heading {
+    	top: -15px;
+        left: 30px;
+        position: fixed;
+        z-index:2;
+    }
+	
+	.site-title {
+		text-align: center;
+		padding-top:10px;
+		img {
+			height: 80px;
+			width: auto;
+		}	
+	/*----Added this----*/
+	.logo{
+		height: auto;
+    position: relative;
+    top: 10px;
+    width: auto;
+    border-radius: 0px 0px 9px 9px;
+	}
+	/*------------------*/
+	}
+}
+
+.page-title {
+		padding-top: 35px;
+    text-align: center;
+    text-decoration: underline;
+    width: 100%;
+    background: gray;
+    padding-bottom: 3px;
+	}
+	
+	.page-title-home{
+		display:none;
+		padding-top:0px;
+	}
+	
+#navigation {
+	display: block;
+    opacity: 0.95;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0px 5px 5px #888888;
+
+	.active{
+		background-color:black;
+		> a {
+           			color: $white;
+      		}
+		}
+
+    li {
+			background: $white;
+            display: block;
+            padding-top:15px;
+            padding-bottom:15px;
+			&:hover {
+                background: $fontColor;        
+    		
+    	 		> a {
+           			color: $white;
+      			}
+			}
+			
+            .child-menu {
+            	display: block;
+                margin: 0;
+       		}
+    }
+
+    ul {
+        margin: 0;
+        text-align: center;
+        background: none repeat scroll 0 0 $white;
+
+        .child-menu {
+            border: $borderStyle;
+            display: none;
+            left: -1px;
+            margin: 0;
+            position: absolute;
+            white-space: nowrap;
+            z-index: 20;
+
+            a {
+                padding: 5px 15px;
+            }
+        }
+    }
+
+    > ul > li {
+        display: inline-block;
+        font-size: 1.2em;
+        position: relative;
+
+        a {
+                color: $gray;
+                display: block;
+                padding: 15px 15px;
+                text-decoration: none;
+            }
+    }
+
+    .child-menu {
+        text-align: left;
+
+        a {
+            border-bottom-width: 0;
+            padding: 5px 15px 5px 30px;
+        }
+
+        li {
+            display: block;
+        }
+    }
+}
+/*----------------Home Page Styles----------------------*/
+	#banner-home {
+	background: none repeat scroll 0 0;
+	/*position: relative;*/
+	padding-bottom:80px;
+	
+    #heading-home {
+    	top: -15px;
+        left: 30px;
+        position: fixed;
+        z-index:2;
+    }
+    .site-title {
+		text-align: center;
+		padding-top:10px;
+		img {
+			height: 80px;
+			width: auto;
+		}	
+	/*----Added this----*/
+	.logo{
+		height: auto;
+    position: relative;
+    top: 10px;
+    width: auto;
+    border-radius: 0px 0px 9px 9px;
+	}
+  }
+}
+
+#HomeImage {
+    background: url("../images/custom/space2.jpg") no-repeat scroll center top black;
+    height: 800px;
+    width: 100%;
+}
+#HomeImage div {
+    float: right;
+    margin-right: 2%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 840px
+}
+#HomeImage {
+	color:white;
+	text-align:left;
+	p {
+    font-size: 14px;
+	}
+}
+#sign-in {
+
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.sign-in{
+	margin:0 auto 0 auto;
+}
+
+.aui {
+	.breadcrumb {
+		background: $secondaryColor;
+	}
+/*-----dockbar additional styling overrides----*/
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li {
+		background: transparent;
+		left: -42px;
+    	transition: left 0.25s;
+    	top:60px;
+		/*margin-left:-30px;*/
+		
+	}
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li:hover {
+		background: transparent;
+		left:-5px;
+		/*margin-left:10px;*/
+	}
+/*--------------------color--------------------*/
+/*------main color of dockbar and text-------*/
+.dockbar-split .dockbar .navbar-inner .nav > li > a {
+    background-color:$dockbarColor;
+    color: #fff;
+    line-height: 31px;
+}
+/*--------styles color of dockbar menu text(hover)/add/edit/preview buttons----*/
+.dockbar-split .dockbar .navbar-inner .nav > li > a:focus, .dockbar-split .dockbar .navbar-inner .nav > li > a:hover {
+    background-color:$dockbarHighlightColor;
+    color: #fff;
+}
+/*------styles dropdown menu----------*/
+.dropdown-menu{
+	background-color:$dockbarColor;
+}
+/*------styles child menu items-------*/
+.dropdown-menu > li > a, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background-color: $dockbarColor;
+    background-image: linear-gradient(to bottom, $dockbarColor, $dockbarColor);
+    background-repeat: repeat-x;
+    color: white;
+    text-decoration: none;
+}
+/*------styles child menu items on hover-------*/
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient(to bottom, $dockbarHighlightColor, $dockbarHighlightColor);
+    background-repeat: repeat-x;
+    color: white;
+    text-decoration: none;
+}
+/*------Styles menu on dock bar when toggled open-------*/
+.dockbar-split .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient($dockbarHighlightColor, $dockbarHighlightColor);
+    box-shadow: none;
+}
+/*------styles child submenu under site administration---------*/
+.dockbar .navbar-inner .site-administration-menu li a {
+    color: white;
+    display: block;
+    padding: 3px 5px 3px 40px;
+}
+/*------styles child submenu under site administration(hover)-------*/
+.dockbar .navbar-inner .site-administration-menu li a:focus, .dockbar .navbar-inner .site-administration-menu li a:hover {
+    background: none repeat scroll 0 0 $dockbarHighlightColor;
+    color: #fff;
+    text-decoration: none;
+}
+/*--------------styles child submenu icons-----------------*/ 
+.dockbar .navbar-inner .site-administration-menu li a i {
+    font-size: 0.8em;
+}
+/*------styles my sites menu item background color-------*/
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient(to bottom, $dockbarHighlightColor, $dockbarHighlightColor);
+    background-repeat: repeat-x;
+    color: white;
+    outline: 0 none;
+    text-decoration: none;
+}
+/*------color of toggle edit controls link when selected-------*/
+.aui .dockbar-split.controls-hidden .dockbar .navbar-inner .nav-add-controls > li.toggle-controls > .toggle-controls-link {
+    background: none repeat scroll 0 0 #f5af45;
+}
+/*----------avatar icon------------*/
+.dockbar .user-avatar img {
+    margin-top: -2px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 22px;
+}
+/*---------------------------------------------*/
+
+	.user-avatar-image {
+		width: 20px;
+	}
+}
+
+.menu-toggle {
+	background: url(../images/custom/icons_sprite.png) 0 -180px;
+	background-size: auto 120px;
+	cursor: pointer;
+	height: 60px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 60px;
+	z-index: 10;
+}
+
+.nav-visible {
+	#navigation, #sign-in {
+	display: block;
+	}
+}
+
+/* ---------- Header Image ---------- */
+.header-image{
+	text-align:center;
+	margin-top:-20px;
+}
+/* ---------- Main Content ---------- */
+
+#wrapper {
+	margin: 0 auto;
+	padding:0;
+	position:relative;
+	/*max-width: 960px;*/
+	/*background-color:$white;*/
+}
+
+.portlet {
+	border: $borderStyle;
+
+	.portlet-title {
+		background-color: #478ECC;
+		color: $white;
+		font-size: 1em;
+		line-height: 1.5em;
+		margin: 0;
+		padding: $portletPaddingTopBottom $portletPaddingLeftRight;
+
+		img {
+			display: none;
+		}
+	}
+
+	.portlet-content {
+		background: $white;
+		padding: $portletPaddingTopBottom $portletPaddingLeftRight;
+	}
+
+	.fieldset {
+		.control-group {
+			input {
+				padding: 4px 5%;
+				width: 90%;
+			}
+		}
+	}
+}
+
+
+#portlet_58{
+	&.portlet {
+	border: $borderStyle;
+	border-radius:10px;
+
+	i{
+	color:$white;	
+	}
+	
+	.portlet-title {
+		background-color: $dockbarColor;
+		color: $white;
+		font-size: 1em;
+		line-height: 1.5em;
+		margin: 0;
+		padding: $portletPaddingTopBottom $portletPaddingLeftRight;
+		border-radius: 10px 10px 0px 0px;
+		img {
+			display: none;
+		}
+	}
+
+	.portlet-content {
+		background: $white;
+		padding: $portletPaddingTopBottom $portletPaddingLeftRight;
+		border-radius: 0px 0px 9px 9px;
+	}
+
+	.fieldset {
+		.control-group {
+			input {
+				padding: 4px 5%;
+				width: 90%;
+			}
+		}
+	}
+}
+}
+/*-----borderless portlet styling----*/
+
+.portlet-borderless-container {
+	margin:10px;
+}
+
+.portlet-borderless-bar {
+    a {
+    }
+
+    .portlet-actions {
+    }
+
+    .portlet-title-default, .portlet-actions {
+    }
+
+    .portlet-action-separator {
+    }
+
+    .portlet-back a {
+    }
+
+    .portlet-close a {
+    }
+}
+
+.lfr-configurator-visibility {
+    .portlet-borderless-bar {
+    }
+
+    &.portlet-journal-content .lfr-icon-actions {
+    }
+}
+
+.portlet-borderless-container:hover .portlet-borderless-bar, .portlet-journal-content:hover .lfr-icon-actions {
+}
+
+.portlet-borderless-container:hover .portlet-borderless-bar .portlet-actions, .portlet-journal-content:hover .lfr-icon-actions .taglib-text {
+}
+
+.portlet-title-default {
+}
+
+.portlet-draggable {
+    .portlet-topper {
+    }
+
+    .portlet-title-default {
+    }
+}
+/*-----My own content Styling for margins for portlets----*/
+#content{
+	margin-left:50px;
+	margin-right:50px;
+	padding-top:0px;
+}
+#content-not-home{
+	
+	margin-left:50px;
+	margin-right:50px;
+	padding-top:0px;
+}
+
+#content-not-home-no-page-title{
+	margin-left:50px;
+	margin-right:50px;
+	padding-top: 108px;
+}
+
+/* ---------- Footer ---------- */
+
+#footer {
+	padding-bottom: 30px;
+	text-align: center;
+	background: black;
+	
+	a, h3 {
+	color: #333;
+	}
+
+	li, ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-heading {
+		display: block;
+		font-size: 1.4em;
+		font-weight: normal;
+		margin: 0;
+		padding: 20px 0 6px;
+		color:$white;
+		}
+
+	.powered-by {
+		display: block;
+		color:white;
+		
+		a{
+			color:blue;
+			
+			&:hover{
+				color:red;
+			}
+		}
+	}
+	#footer_navigation{
+			    	display:block;
+			    	position:relative;
+			    	padding-top: 30px;
+			    	
+			    	a{
+				    	color:white;
+				    	
+				    	&:hover{
+				    		color:blue;
+				    	}	
+			    	}
+			    	
+			    	li{
+			    		display:inline-flex;
+			    		margin: 0px 10px 0px 10px;
+			    	}
+			    }
+			    > ul > li{
+			    	display:inline-block;
+			    }
+			    
+			    .child-menu{
+			    	display:block;
+			    	li{
+			    		display:block;
+			    	}
+			    }
+}
+
+/* ---------- Extras ---------- */
+
+.aui .btn {
+	@include text-shadow(none);
+}
+
+.ie7, .ie8 {
+	#banner .site-title img {
+	height: 50px;
+	width:auto;
+}
+
+#navToggle {
+	background: url(../images/custom/menu_button_ie.png);
+	display: block !important;
+	}
+}
+
+/*---------- Social Media Icons ---------- */
+.social-media-wrapper {
+				    width: 90px;
+
+				    li {
+				        display: inline-block;
+				    }
+
+				    ul {
+				        text-align: center;
+				    }
+					
+				    .social-icon {
+				        background: url(../images/custom/social-icons.png);
+				        display: block;
+				        float: left;
+				        height: 42px;
+				        margin: 3px;
+				        width: 44px;
+				        border-radius:6px;
+
+				        &.facebook {
+				            background-position: 0px -42px;
+				        }
+
+				        &.linkedin {
+				            background-position: 128px -42px;
+				        }
+
+				        &.rss {
+				            background-position: 43px -42px;
+				        }
+
+				        &.twitter {
+				            background-position: -43px -42px;
+				        }
+
+				        &.youtube {
+				            background-position: -86px -40px;
+				        }
+				    }
+				}
+
+			    .footer-content, .social-media-wrapper {
+			        display: inline;
+			        vertical-align: top;
+			        & .nav-heading{
+			        	text-align:center;
+			        }
+			    }
+
+			    .footer-navigation li.parent-item {
+			        float: left;
+			        padding: 0 15px;
+			        vertical-align: top;
+			    }
+			    
+/*-------responsive-------*/
+				
+
+	/*-----dockbar responsive------*/
+	@include respond-to(phone, tablet) {
+	.aui {
+		* {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		/*---I added this---*/
+		#wrapper {
+		margin: 0 -20px;
+		padding:0;
+		position:relative;
+		}
+		
+		#banner{
+			position:relative;
+			/*-----added----*/
+			padding-top:0px;
+		}
+		
+#HomeImage {
+    background: url("../images/custom/space2.jpg") no-repeat scroll center bottom black;
+    height: 300px;
+    margin-top: -75px;
+    width: 100%;
+}
+#HomeImage div {
+    /*float: right;
+    margin-right: 2%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px*/
+    display:none;
+}
+#HomeImage p {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+#content-not-home-no-page-title {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 0px;
+}
+		/*------------------*/
+		/*--added #banner->*/#banner {
+		padding-bottom:0px;
+		padding-top:0px;
+		#heading {
+			bottom: 100%;
+			margin-top: -2em;
+			position: absolute;
+			top:-48px;
+			
+			.site-title {
+				font-size: 26px;
+
+				img {
+					width: auto;
+					height:35px;
+					
+				}
+				.logo{
+				height:35px;
+				width:auto;
+				top:0px;
+			}
+			}
+		}
+}
+
+			.page-title{
+				padding-top:0px;
+			}
+
+		#navigation {
+			display: none;
+			/*---I added this---*/
+			position:relative;
+			/*------------------*/
+
+			&.open {
+				display: block;
+
+				.navbar-inner {
+					@include border-radius(3px);
+
+					padding: 10px;
+
+					.nav-collapse {
+						height: auto;
+						overflow: visible;
+					}
+				}
+				/*---I added this---*/
+				li{
+					width:100%;
+				}
+				/*------------------*/
+			}
+
+			.nav {
+				margin: 0;
+			}
+		}
+
+		.dockbar-split .dockbar, .dockbar {
+			float: right;
+			height: auto;
+			position: relative;
+			z-index: 401;
+
+			.info-items {
+				height: auto;
+				position: static;
+				width: 300px;
+			}
+
+			.navbar-inner {
+				width: auto;
+				box-shadow:none;
+
+				.btn-navbar {
+					background: transparent;
+					border: none;
+					float: left;
+					font-size: 24px;
+					padding: 12px 15px;
+
+					&:hover {
+						background-color: #5BBAE8;
+					}
+
+					&.open {
+						background-color: #F5AF45;
+					}
+				}
+
+				.nav-account-controls {
+					padding: 0 5px;
+
+					.user-avatar-image {
+						display: none;
+					}
+				}
+/*-----dockbar additional styling overrides----*/
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li {
+		background: transparent;
+		left: 0px;
+		top:0px;
+    	transition: none;
+		/*margin-left:-30px;*/
+	}
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li:hover {
+		background: transparent;
+		left:0px;
+		/*margin-left:10px;*/
+	}
+/*---------------------------------------------*/
+				.nav-add-controls {
+					background: transparent;
+					border-top-width: 0;
+					position: static;
+					z-index: 350;
+					padding: 0 5px;
+
+					> li {
+						float: none;
+						margin: 0px;
+						position: relative;
+						transition:none;
+						left:0px;
+						top: 0px;
+						
+						&:hover {
+							left:0px;
+						}
+						
+						&.toggle-controls a {
+							/*clip: rect(auto auto auto auto);*/
+							position: static;
+							visibility: visible;
+						}
+
+						.page-preview-controls {
+							display: none;
+						}
+
+						> a {
+							background: transparent;
+							text-align: left;
+							white-space: nowrap;
+
+							&:hover {
+								background: #F3f3f3;
+							}
+
+							[class^="icon-"], [class^="icon-"], [class*=" icon-"] {
+								font-size: 22px;
+								margin-top: 0;
+							}
+
+							&.toggle-controls-link {
+								background: transparent;
+
+								[class^="icon-"], [class^="icon-"], [class*=" icon-"] {
+									color: #FFF;
+								}
+							}
+
+							.nav-item-label {
+								background: transparent;
+								display: inline;
+								left: 0;
+								margin-left: 0;
+								margin-top: 0;
+								padding: 0;
+								position: relative;
+							}
+
+							&:hover .nav-item-label {
+								display: inline;
+							}
+
+							.icon-caret-down {
+								display: none;
+							}
+						}
+					}
+				}
+
+				.nav-collapse {
+					z-index: 400;
+
+					&.open {
+						overflow: visible;
+					}
+
+					> .nav {
+						background: #009AE5;
+						border-width: 0;
+						left: auto;
+						margin: 0;
+						min-width: 160px;
+						position: absolute;
+						right: 0;
+						z-index: 400;
+
+						> li {
+							&.dropdown {
+								.dropdown-menu li a {
+									font-size: 16px;
+									line-height: 32px;
+								}
+
+								&.open {
+									> .dropdown-toggle {
+										color: #FFFFFF;
+									}
+								}
+							}
+
+							> a {
+								color: #FFF;
+								font-size: 16px;
+								margin: 5px 0;
+								padding: 6px 15px;
+
+								&:focus, &:hover {
+									background-color: #5BBAE8;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.portlet-dockbar {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.signed-out #_145_navAddControlsNavbarBtn {
+			display: none;
+		}
+		
+		/*-----------------------Home Page Styles----------------------*/
+		/*--added #banner->*/#banner-home {
+		padding-bottom:0px;
+		padding-top:70px;
+		#navigation ul {
+    background: none repeat scroll 0 0 white;
+    margin: 0 0 73px;
+    text-align: center;
+		}
+		#heading-home {
+			bottom: 100%;
+			margin-top: -2em;
+			position: absolute;
+			top:-48px;
+			
+			.site-title {
+				font-size: 26px;
+
+				img {
+					width: auto;
+					height:35px;
+					
+				}
+				.logo{
+				height:35px;
+				width:auto;
+				top:0px;
+			}
+			}
+		}
+}
+		
+	}
+}
+
+/*-------------phone responsive--------------*/
+@include respond-to(phone) {
+	.aui {
+	#banner{
+		padding-top:70px;
+	#heading{
+		margin-top: -2em;
+		margin-bottom:0px;
+    position: relative;
+    top: -30px;
+    left: 0px;
+	}
+}
+	#HomeImage {
+   background: url("../images/custom/space2.jpg") no-repeat scroll center bottom black;
+    height: 230px;
+    margin-top: -75px;
+    width: 100%;
+}
+#HomeImage div {
+  	float: right;
+    margin-right: 2%;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px
+}
+#HomeImage p {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+/*-----My own content Styling for margins for portlets----*/
+#content{
+	margin-left:0px;
+	margin-right:0px;
+	padding-top:0px;
+}
+#content-not-home{
+	
+	margin-left:0px;
+	margin-right:0px;
+	padding-top:0px;
+}
+#content-not-home-no-page-title {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+}
+dockbar-split .dockbar, .dockbar {
+			float: none;
+}
+
+	#banner-home{
+		padding-top:70px;
+	#heading-home{
+		margin-top: -2em;
+		margin-bottom:70px;
+    position: relative;
+    top: -30px;
+    left: 0px;
+	}
+}
+
+}
+}

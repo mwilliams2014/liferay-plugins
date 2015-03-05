@@ -1,0 +1,85 @@
+$dockbarColor: red;
+$dockbarHighlightColor: green;
+
+/*--------------------color--------------------*/
+/*------main color of dockbar and text-------*/
+.aui{
+	
+.christmas.dockbar-split .dockbar .navbar-inner .nav > li > a {
+    background-color:$dockbarColor;
+    color: #fff;
+    line-height: 31px;
+}
+/*--------styles color of dockbar menu text(hover)/add/edit/preview buttons----*/
+.christmas.dockbar-split .dockbar .navbar-inner .nav > li > a:focus, .christmas.dockbar-split .dockbar .navbar-inner .nav > li > a:hover {
+    background-color:$dockbarHighlightColor;
+    color: #fff;
+}
+/*------styles dropdown menu----------*/
+.christmas .dropdown-menu{
+	background-color:$dockbarColor;
+}
+/*------styles child menu items-------*/
+.christmas .dropdown-menu > li > a, .dropdown-menu > li > a:focus, .christmas .dropdown-submenu:hover > a, .christmas .dropdown-submenu:focus > a {
+    background-color: $dockbarColor;
+    background-image: linear-gradient(to bottom, $dockbarColor, $dockbarColor);
+    background-repeat: repeat-x;
+    color: white;
+    text-decoration: none;
+}
+/*------styles child menu items on hover-------*/
+.christmas .dropdown-menu > li > a:hover, .christmas .dropdown-menu > li > a:focus, .christmas .dropdown-submenu:hover > a, .christmas .dropdown-submenu:focus > a {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient(to bottom, $dockbarHighlightColor, $dockbarHighlightColor);
+    background-repeat: repeat-x;
+    color: white;
+    text-decoration: none;
+}
+/*------Styles menu on dock bar when toggled open-------*/
+.christmas.dockbar-split .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient($dockbarHighlightColor, $dockbarHighlightColor);
+    box-shadow: none;
+}
+/*------styles child submenu under site administration---------*/
+.christmas.dockbar .navbar-inner .site-administration-menu li a {
+    color: white;
+    display: block;
+    padding: 3px 5px 3px 40px;
+}
+/*------styles child submenu under site administration(hover)-------*/
+.christmas .dockbar .navbar-inner .site-administration-menu li a:focus, .christmas .dockbar .navbar-inner .site-administration-menu li a:hover {
+    background: none repeat scroll 0 0 $dockbarHighlightColor;
+    color: #fff;
+    text-decoration: none;
+}
+/*--------------styles child submenu icons-----------------*/ 
+.christmas.dockbar .navbar-inner .site-administration-menu li a i {
+    font-size: 0.8em;
+}
+/*------styles my sites menu item background color-------*/
+.christmas .dropdown-menu > .active > a, .christmas .dropdown-menu > .active > a:hover, .christmas .dropdown-menu > .active > a:focus {
+    background-color: $dockbarHighlightColor;
+    background-image: linear-gradient(to bottom, $dockbarHighlightColor, $dockbarHighlightColor);
+    background-repeat: repeat-x;
+    color: white;
+    outline: 0 none;
+    text-decoration: none;
+}
+/*------color of toggle edit controls link when selected-------*/
+.christmas.dockbar-split.controls-hidden .dockbar .navbar-inner .nav-add-controls > li.toggle-controls > .toggle-controls-link {
+    background: none repeat scroll 0 0 #f5af45;
+}
+/*----------avatar icon------------*/
+.christmas.dockbar .user-avatar img {
+    margin-top: -2px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 22px;
+}
+/*---------------------------------------------*/
+
+	.christmas.user-avatar-image {
+		width: 20px;
+	}
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="activeIndex" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[1]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="timeInterval" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[3]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="maxImageHeight" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[252]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="maxImageWidth" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[940]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="image" index="0" type="wcm-image" dataType="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=banner-1.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="image" index="1" type="wcm-image" dataType="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=banner-2.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="image" index="2" type="wcm-image" dataType="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=banner-3.png$]]]></dynamic-content>
+	</dynamic-element>
+</root>
